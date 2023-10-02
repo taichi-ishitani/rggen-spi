@@ -1,0 +1,20 @@
+rggen_spi_adapter #(
+  .ADDRESS_WIDTH        (<%= address_width %>),
+  .LOCAL_ADDRESS_WIDTH  (<%= local_address_width %>),
+  .BUS_WIDTH            (<%= bus_width %>),
+  .REGISTERS            (<%= total_registers %>),
+  .PRE_DECODE           (<%= pre_decode %>),
+  .BASE_ADDRESS         (<%= base_address %>),
+  .BYTE_SIZE            (<%= byte_size %>),
+  .ERROR_STATUS         (<%= error_status %>),
+  .DEFAULT_READ_DATA    (<%= default_read_data %>),
+  .INSERT_SLICER        (<%= insert_slicer %>)
+) u_adapter (
+  .i_clk        (<%= clock %>),
+  .i_rst_n      (<%= reset %>),
+  .i_sclk       (<%= sclk %>),
+  .i_ss_n       (<%= ss_n %>),
+  .i_mosi       (<%= mosi %>),
+  .o_miso       (<%= miso %>),
+  .register_if  (<%= register_if %>)
+);
